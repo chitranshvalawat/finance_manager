@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title_block %}- All tasks{% endblock %}
+
+{% block body_block %}
+<div class="section-padding pt-4">
+	<div class="container">
+		{% include 'partials/_alerts.html' %}
+		{% if tasks %}
+		<div class="text-center mb-2 d-block d-lg-none">
+			<a href="{% url 'todo:create' %}" class="btn btn-primary btn">
+				<i class="fas fa-plus-circle"></i> Create task
+			</a>
+		</div>
+		<div class="display-4">All tasks list</div><br>
+		{% for task in tasks %}
+		<div class="border-light p-3 my-3 {% if task.important %} important-task {% else %} bg-light {% endif %}">
+			<div class="display-5 d-flex flex-row">
+				<a href="{% url 'todo:important' task.id %}" title="Important"
+				   class="mr-3 {% if task.important%} text-primary {% endif %}">
+					<i class="fas fa-star"></i>
+				</a>
+				<a href="{% url 'todo:edit' task.id %}">
+					{{task.title | truncatewords:15 }}
+				</a>
+				<a href="{% url 'todo:complete_task' task.id %}"
+				   class="{% if task.completed_date %}text-success {% endif %} mx-3"
+				   title="{% if task.completed_date is none %}Complete task{% endif %}">
+					<i class="fas fa-check"></i>
+				</a>
+				
+				<a href="{% url 'todo:delete' task.id %}" title="Delete"
+				   class="text-danger mx-3"><i class="fas fa-times"></i></a>
+			</div>
+			<div class="text-muted">
+				<small class="mr-4">Created: {{ task.created_date }}</small>
+				{% if task.completed_date %}
+				<small class="mr-4">Completed: {{ task.completed_date }}</small>
+				{% else %}
+				<small>Task not complete yet.</small>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+		{% else %}
+		<div class="text-center">
+			<div class="display-4">You don't have any task yet.</div><br>
+			<p class="display-5">After creating a task you can set it as an important task based on your preference. You can
+				checked a task after finishing that. You can also delete the unnecessary tasks.</p>
+			<a class="btn btn-primary btn" href="{% url 'todo:create' %}">Create Task</a>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+#header{
+    background-color: #DC3545;
+    color: #ffffff;
+}
+#branding h1{
+    color: #3333;
+}
+a:link,
+a:visited{
+    color: #283E60;
+}
+div.breadcrumbs{
+    background-color: #C82333;
+}
+.module caption, .inline-group h2 {
+    background-color: #C82333;
+}
+input[type="submit"], button {
+    background-color: #10284E;
+    color: #fff;
+}
+input[type="submit"], button:hover{
+    background-color: #10284E;
+}
+.module h2, .module caption, .inline-group h2 {
+     background-color: #C82333;!important;
+}
+.selector-chosen h2{
+    background-color: #C82333;!important;
+}
+.module caption, .inline-group h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+#user-tools a:hover{
+    color: #ffff;
+}
+.logo-text{
+    color: #fff!important;
+}
+td, th{
+    font-size: 14px;
+    padding: 10px;
+}

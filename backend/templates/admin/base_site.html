@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title%}
+Admin area
+{% endblock %}
+
+{% block branding %}
+<h1 id="head">
+ <a href="{% url 'admin:index' %}" class="logo-text">
+   <b>Chart APP</b> || Admin area
+ </a>
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+ <link rel="stylesheet" href="{% static 'assets/css/admin.css' %}">
+{% endblock %}

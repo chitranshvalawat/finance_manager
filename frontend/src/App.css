@@ -1,0 +1,176 @@
+.App {
+  text-align: left;
+}
+
+p, a, h3, .btn, option {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: bold !important;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: bold !important;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.global-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.card-title{ font-weight:300; }
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+
+.login-form{ 
+	width:330px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.alert{
+	margin-bottom:-30px;
+	font-size: 13px;
+	margin-top:20px;
+}
+
+.dashboard-toolbar{
+  background: rgb(71, 52,70) !important;
+  align-items: flex-end;
+  font-size: 25px;
+}
+
+.title{
+  text-align: -webkit-left;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.logout{
+  float: right;
+  margin-right: 25px;
+  margin-bottom: 12px;
+}
+
+.budget-bar{
+  padding: 13px 0px 0px 0px;
+  border-radius: 15px;
+  background-color: rgb(71, 52,70) !important;
+  text-transform: uppercase;
+}
+
+.btn-actions{
+  background: #FFF !important;
+  width: 60%;
+}
+
+.margin-title{
+  margin-top: 25px !important;
+}
+
+.icon-style{
+  margin-right:0px;
+  font-size: 21px;
+  margin-bottom: 4px;
+  width: 31px;
+}
+.title-column{
+  width: 50%;
+}
+
+.weekly-width{
+  width: 100px !important;
+}
+
+.align-center{
+  text-align: -webkit-center;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: #000 !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+}
+
+.bordered-budget{
+  border: 2px solid;
+  border-radius: 15px;
+  padding: 25px;
+  margin-right: 12px;
+}
+
+.row-add{
+  float: right;
+  margin-bottom: 15px;
+  margin-top: -10px;
+}
+
+.default-background{
+  background-color: rgb(71, 52,70) !important;
+  color: #FFF;
+}
+
+.font-weight-bold{
+  font-weight: bold !important;
+}
+
+.margin-right{
+  margin-right: 5px;
+}
+
+.chart-background{
+  background: purple;
+}
+
+td{
+  border-color: rgb(71, 52,70) !important;
+}

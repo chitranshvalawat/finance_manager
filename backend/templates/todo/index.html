@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title_block %}- Home{% endblock %}
+
+{% block body_block %}
+<div class="bg-light py-4">
+	<div class="container">
+		<div class="text-center">
+			<div class="display-4"><i class="far fa-calendar-alt"></i> Today is</div>
+			<h3 id="today" class="text-danger"></h3>
+			<h4 class="text-muted mt-3"><i class="far fa-clock"></i> <span id="current-time"></span></h4>
+		</div>
+	</div>
+</div>
+<div class="section-padding">
+	<div class="container">
+		<div class="welcome-text">
+			<p class="display-4 text-center">Create your <span class="text-danger">Budget</span> chart<span class="text-danger">.</span></p><br>
+			<p class="display-4 text-center">Users-Categories-<span class="text-danger">Budgets</span>-Rows<span class="text-danger">.</span></p><br>
+
+		</div>
+		<div class="text-center">
+			{% if not user.is_authenticated %}
+			<a href="{% url 'accounts:register' %}" class="btn btn-danger">
+				<i class="fa fa-hourglass-start"></i>
+				Getting started
+			</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title_block %}- Account login{% endblock %}
+
+{% block body_block %}
+<div class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mx-auto">
+				{% include 'partials/_alerts.html' %}
+				<div class="card">
+					<div class="card-header">
+						<h4 class="text-center">
+							<i class="fas fa-sign-in-alt"></i> Login here
+						</h4>
+					</div>
+					<div class="card-body">
+						<form method="POST" action="{% url 'accounts:login' %}">
+							{% csrf_token %}
+							<div class="form-group">
+								<label>Email or Username</label>
+								<input type="text" name="username" class="form-control" required>
+							</div>
+					
+							<div class="form-group">
+								<label>Password</label>
+								<input type="password" name="password" class="form-control" required>
+								<small><a href="#" class="text-muted">forget password</a></small>
+							</div>
+						
+							<div class="form-group">
+								<input type="submit" name="submit" value="Login" class="btn btn-success btn-block btn-md">
+							</div>
+							<small>Don't have an account? <a href="register.html" id="">Register here</a></small>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+/* ==== BASE CSS ==== */
+*{
+	margin:0;
+	padding: 0;
+}
+a:hover{
+    text-decoration: none;
+}
+
+body
+{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+/*********************************************/
+
+.welcome-text{
+	font-size: 18px;
+}
+
+footer a{
+	color: #333;
+}
+.display-5{
+	font-size: 20px;
+}
+.display-5 a{
+	color: #444;
+}
+
+.important-task{
+	background-color: #FDF7E3;
+}
+
+#current-time{
+	letter-spacing: 4px;
+}
+ul.errorlist{
+	list-style: none;
+	color: #c70b0b;
+}
+.border-light {
+	border: 1px solid #f7f7f7;
+}
+.card, .btn, .form-control, .alert
+{
+	border-radius: 0;
+}

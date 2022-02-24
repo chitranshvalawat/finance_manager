@@ -1,0 +1,48 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,400i,500,700,700i&display=swap" rel="stylesheet">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/custom-bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+	
+	<script src="{% static 'assets/js/jquery-3.2.1.slim.min.js' %}"></script>
+	
+	<title>app {% block title_block %}{% endblock %}</title>
+
+	<!-- fav-icon -->
+	<link rel="shortcut icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+</head>
+
+<body>
+
+	<!-- Header/ Nav-->
+	{% include 'partials/_navbar.html' %}
+		
+		{% block body_block %}
+		{%endblock %}
+	
+	{% include 'partials/_footer.html' %}
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+	<script src="{% static 'assets/js/popper-1.12.9.min.js' %}"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/all.js' %}"></script>
+	<script src="{% static 'assets/js/moment.min.js' %}"></script>
+	<script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

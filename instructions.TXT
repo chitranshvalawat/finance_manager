@@ -1,0 +1,36 @@
+instruction to install back end server 
+A run backend server 
+
+1. create python virtual enviroment 
+- open cmd 
+- change directory of cmd with " cd <Project directory >" eg :cd "C:\Users\User\OneDrive\Desktop\project"
+- create python envirement with cmd "python -m venv env"
+activate the envirement with ".\env\Scripts\activate" (make sure that env directory is in the curent folder)
+2 changed directory to backend "cd backend"
+3. install requirements with "pip install -r requirements.txt"
+4 make maigrations to database with
+- "python manage.py makemigrations"
+- "python manage.py makemigrations budgetdata"
+- "python manage.py migrate"
+5 - create super user and enter username and password (email optional)
+- "python manage.py createsuperuser"
+6 run server 
+- "python manage.py runserver"
+
+
+B run front end server 
+open an other cmd window 
+1.make sure npm installed in cmd "npm --version"
+2.change directory to frontend server "cd  "C:\Users\User\OneDrive\Desktop\project\frontend"
+3. install modules "npm install"
+4.run server "npm start"
+
+you should open browser on http://localhost:3000
+
+the first category you should create is withthis specific name "income" to be special category
+all categoris that has "investement" in thier names are special 
+
+
+ 
+
+
